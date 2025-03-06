@@ -11,10 +11,10 @@ app.use(cors());
 
 // MySQL Connection
 const db = mysql.createConnection({
-  host: process.env.DB_HOST,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASSWORD,
-  database: process.env.DB_NAME,
+  host: localhost,
+  user: root,
+  password: "",
+  database: "conic",
 });
 
 db.connect((err) => {
@@ -35,6 +35,6 @@ app.get("/employees", (req, res) => {
   });
 });
 
-app.listen(process.env.PORT, () => {
-  console.log(`Server running on port ${process.env.PORT}`);
+app.listen(5000, () => {
+  console.log(`Server running on port 5000`);
 });
